@@ -1,7 +1,6 @@
 package org.example.university.entities;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
@@ -11,7 +10,6 @@ import java.util.Set;
 @Data
 @Entity
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
 @Table(name = "teachers")
 public class Teacher extends Person {
     private String email;

@@ -1,7 +1,6 @@
 package org.example.sales.entities;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
@@ -12,11 +11,9 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @Table(name = "products")
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
     private Long id;
     private String name;
     private Double quantity;

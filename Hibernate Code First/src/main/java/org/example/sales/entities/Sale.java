@@ -1,7 +1,6 @@
 package org.example.sales.entities;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
@@ -11,11 +10,9 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @Table(name = "sales")
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
     private Long id;
     @ManyToOne(optional = false)
     @JoinColumn(name = "product_id", referencedColumnName = "id")
