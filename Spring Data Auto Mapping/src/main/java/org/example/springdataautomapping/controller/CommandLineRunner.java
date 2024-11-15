@@ -1,8 +1,10 @@
 package org.example.springdataautomapping.controller;
 
 
+import org.example.springdataautomapping.models.dtos.GameDto;
 import org.example.springdataautomapping.models.dtos.LoginUserDto;
 import org.example.springdataautomapping.models.dtos.RegisterUserDto;
+import org.example.springdataautomapping.services.GameService;
 import org.example.springdataautomapping.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,11 +16,13 @@ import java.io.InputStreamReader;
 public class CommandLineRunner implements org.springframework.boot.CommandLineRunner {
 
     private final UserService userService;
+    private final GameService gameService;
 
 
     @Autowired
-    public CommandLineRunner(UserService userService) {
+    public CommandLineRunner(UserService userService , GameService gameService) {
         this.userService = userService;
+        this.gameService = gameService;
     }
 
     @Override
@@ -43,6 +47,10 @@ public class CommandLineRunner implements org.springframework.boot.CommandLineRu
 
                 case "Logout":
                     command = this.userService.logoutUser();
+                    break;
+
+                case "AddGame":
+                    command = this.gameService.addGame(new GameDto(tokens[1],tokens[2],tokens[3],tokens[4],tokens[5],tokens[6],tokens[7]));
                     break;
 
 
