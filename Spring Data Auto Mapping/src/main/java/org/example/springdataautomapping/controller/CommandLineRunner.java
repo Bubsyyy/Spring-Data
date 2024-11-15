@@ -40,6 +40,12 @@ public class CommandLineRunner implements org.springframework.boot.CommandLineRu
                     command = this.userService.loginUser(new LoginUserDto(tokens[1],tokens[2]));
                     break;
 
+
+                case "Logout":
+                    command = this.userService.logoutUser();
+                    break;
+
+
             }
 
 

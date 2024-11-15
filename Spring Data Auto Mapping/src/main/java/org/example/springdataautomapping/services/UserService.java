@@ -10,6 +10,8 @@ public interface UserService {
 
     String loginUser(LoginUserDto loginUserDto );
 
+    String logoutUser();
+
     boolean isLoggedIn();
 
     User getUser();
