@@ -1,8 +1,10 @@
 package org.example.springdataautomapping.services.impls;
 
 import org.example.springdataautomapping.models.dtos.EditGameDto;
+import org.example.springdataautomapping.models.dtos.GameDetailDto;
 import org.example.springdataautomapping.models.dtos.GameDto;
 import org.example.springdataautomapping.models.entities.Game;
+import org.example.springdataautomapping.models.entities.User;
 import org.example.springdataautomapping.repositories.GameRepository;
 import org.example.springdataautomapping.services.GameService;
 import org.example.springdataautomapping.services.UserService;
@@ -13,7 +15,9 @@ import org.springframework.stereotype.Service;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class GameServiceImpl implements GameService {
@@ -83,6 +87,53 @@ public class GameServiceImpl implements GameService {
 
 
         return String.format("Deleted %s", gameToDelete.getTitle());
+    }
+
+    @Override
+    public String showAllGames() {
+        List<Game> games = this.gameRepository.findAll();
+
+        StringBuilder sb = new StringBuilder();
+        games.stream().forEach(game -> {
+            sb.append(String.format("%s - %.2f\n", game.getTitle(), game.getPrice()));
+        });
+
+        return sb.toString();
+
+    }
+
+    @Override
+    public String showGameDetails(String title) {
+        Optional<Game> gameByTitle = this.gameRepository.findByTitle(title);
+
+        if (gameByTitle.isPresent()) {
+
+            Game game = gameByTitle.get();
+            GameDetailDto gameDetailDto = modelMapper.map(game, GameDetailDto.class);
+
+            return String.format("%s  %.2f %s %s\n", gameDetailDto.getTitle(), gameDetailDto.getPrice(), gameDetailDto.getDescription(),gameDetailDto.getReleaseDate());
+        }
+
+        throw new IllegalArgumentException("The game does not exist.");
+
+
+    }
+
+    @Override
+    public String showOwnedGames() {
+        if(!this.userService.isLoggedIn()){
+            throw new IllegalArgumentException("You are not logged in.");
+        }
+
+        User loggedUser = this.userService.getUser();
+        StringBuilder sb = new StringBuilder();
+        loggedUser.getGames().stream().forEach(game -> {
+            sb.append(game.getTitle());
+            sb.append(System.lineSeparator());
+
+        });
+        return sb.toString();
+
     }
 
     private void validateAdminUser() {

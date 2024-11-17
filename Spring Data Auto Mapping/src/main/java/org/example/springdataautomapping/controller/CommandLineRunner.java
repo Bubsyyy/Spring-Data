@@ -70,6 +70,18 @@ public class CommandLineRunner implements org.springframework.boot.CommandLineRu
                     command = this.gameService.deleteGame(Long.parseLong(tokens[1]));
                     break;
 
+                case "AllGames":
+                    command = this.gameService.showAllGames();
+                    break;
+
+
+                case "DetailGame" :
+                    command = this.gameService.showGameDetails(tokens[1]);
+                    break;
+
+                case "OwnedGames" :
+                    command = this.gameService.showOwnedGames();
+                    break;
 
 
 

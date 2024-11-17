@@ -18,7 +18,7 @@ public class User extends BaseEntity {
     private String password;
     @Column(name = "is_admin")
     private boolean isAdmin;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "users_games",
             joinColumns = @JoinColumn(name = "user_id" , referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn (name = "game_id",referencedColumnName = "id")

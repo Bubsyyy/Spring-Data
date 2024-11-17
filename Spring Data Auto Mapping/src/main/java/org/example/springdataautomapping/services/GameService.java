@@ -9,4 +9,10 @@ public interface GameService {
     String editGame(EditGameDto editGameDto) throws IllegalAccessException;
 
     String deleteGame(Long id);
+
+    String showAllGames();
+
+    String showGameDetails(String title);
+
+    String showOwnedGames();
 }
