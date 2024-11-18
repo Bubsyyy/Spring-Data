@@ -9,7 +9,14 @@
         <option value="$PROJECT_DIR$/Introduction to Hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/Hibernate Code First/pom.xml" />
         <option value="$PROJECT_DIR$/Spring Data Auto Mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring Data Adv Querying/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring Advance Querying/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Spring Data Adv Querying/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
