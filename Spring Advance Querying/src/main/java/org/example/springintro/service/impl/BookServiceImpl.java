@@ -1,8 +1,6 @@
 package org.example.springintro.service.impl;
 
-import org.example.springintro.model.entity.AgeRestriction;
-import org.example.springintro.model.entity.Book;
-import org.example.springintro.model.entity.EditionType;
+import org.example.springintro.model.entity.*;
 import org.example.springintro.repository.BookRepository;
 import org.example.springintro.service.AuthorService;
 import org.example.springintro.service.BookService;
