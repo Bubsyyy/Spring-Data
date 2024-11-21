@@ -1,7 +1,9 @@
 package org.example.jsonprocessing.services.impls;
 
 import com.google.gson.Gson;
+import org.example.jsonprocessing.dtos.SoldProductDto;
 import org.example.jsonprocessing.dtos.UserSeedDto;
+import org.example.jsonprocessing.dtos.UserSoldProductsDto;
 import org.example.jsonprocessing.entities.User;
 import org.example.jsonprocessing.repositories.UserRepository;
 import org.example.jsonprocessing.services.UserService;
@@ -12,6 +14,10 @@ import org.springframework.stereotype.Service;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -52,6 +58,32 @@ public class UserServiceImpl implements UserService {
                 this.userRepository.saveAndFlush(user);
             }
         }
+
+    }
+
+    @Override
+    public void exportSuccessfullySoldProducts() throws IOException {
+        Set<User> usersBySoldIsNotNull = this.userRepository.findUsersBySoldIsNotNull();
+        usersBySoldIsNotNull.stream().filter(user -> user.getSold().size()>0);
+
+        Set<UserSoldProductsDto> userSoldProductsDtos = usersBySoldIsNotNull.stream().map(user -> {
+                    UserSoldProductsDto userSoldProductsDto = this.modelMapper.map(user, UserSoldProductsDto.class);
+                    userSoldProductsDto.setSoldProducts(user.getSold().stream()
+                            .map(product -> this.modelMapper.map(product, SoldProductDto.class)).collect(Collectors.toSet()));
+
+
+                    return userSoldProductsDto;
+
+                }
+        ).collect(Collectors.toSet());
+
+
+        String json = gson.toJson(userSoldProductsDtos);
+        FileWriter fileWriter = new FileWriter("Json Processing/src/main/resources/jsons/user-sold-products.json");
+        fileWriter.write(json);
+        fileWriter.close();
+
+
 
     }
 

@@ -1,43 +1,18 @@
 [
   {
-    "name": "Perrigo Benzoyl Peroxide",
-    "price": 873.24,
-    "seller": "Billy Parker"
+    "name": "Extra Strength Pain Reliever PM",
+    "price": 542.72,
+    "seller": "Betty Lawson"
   },
   {
-    "name": "GOONG SECRET CALMING BATH",
-    "price": 742.47,
-    "seller": "Nicole Harris"
+    "name": "AMARANTHUS PALMERI POLLEN",
+    "price": 623.16,
+    "seller": "Eugene Stewart"
   },
   {
-    "name": "Metformin Hydrochloride",
-    "price": 953.99,
-    "seller": "Thomas Snyder"
-  },
-  {
-    "name": "PRIMAXIN",
-    "price": 686.66,
-    "seller": "Patricia Fuller"
-  },
-  {
-    "name": "Parsley",
-    "price": 519.06,
-    "seller": "Billy Parker"
-  },
-  {
-    "name": "Agaricus Equisetum Special Order",
-    "price": 585.93,
-    "seller": "Jacqueline Perez"
-  },
-  {
-    "name": "Levothyroxine Sodium",
-    "price": 885.86,
-    "seller": "Brenda Howell"
-  },
-  {
-    "name": "Prednisone",
-    "price": 550.72,
-    "seller": "Jacqueline Perez"
+    "name": "AVANDAMET",
+    "price": 632.08,
+    "seller": "Chris Mitchell"
   },
   {
     "name": "ESIKA",
@@ -45,14 +20,39 @@
     "seller": "Patricia Cooper"
   },
   {
-    "name": "Ranitidine",
-    "price": 926.64,
-    "seller": "Patricia Cooper"
-  },
-  {
     "name": "Naproxen",
     "price": 807.22,
     "seller": "Patricia Cooper"
+  },
+  {
+    "name": "Pollens - Weeds and Garden Plants, Nettle Urtica dioica",
+    "price": 782.77,
+    "seller": "Betty Ward"
+  },
+  {
+    "name": "Glipizide and Metformin Hydrochloride",
+    "price": 953.60,
+    "seller": "Thomas Snyder"
+  },
+  {
+    "name": "Metformin Hydrochloride",
+    "price": 953.99,
+    "seller": "Thomas Snyder"
+  },
+  {
+    "name": "Prednisone",
+    "price": 550.72,
+    "seller": "Jacqueline Perez"
+  },
+  {
+    "name": "NEO-POLY-BAC HYDRO",
+    "price": 967.32,
+    "seller": "Betty Lawson"
+  },
+  {
+    "name": "PRIMAXIN",
+    "price": 686.66,
+    "seller": "Patricia Fuller"
   },
   {
     "name": "Topiramate",
@@ -65,33 +65,33 @@
     "seller": "Clarence Fowler"
   },
   {
-    "name": "AMARANTHUS PALMERI POLLEN",
-    "price": 623.16,
-    "seller": "Eugene Stewart"
+    "name": "Levothyroxine Sodium",
+    "price": 885.86,
+    "seller": "Brenda Howell"
   },
   {
-    "name": "Glipizide and Metformin Hydrochloride",
-    "price": 953.60,
-    "seller": "Thomas Snyder"
+    "name": "Perrigo Benzoyl Peroxide",
+    "price": 873.24,
+    "seller": "Billy Parker"
   },
   {
-    "name": "NEO-POLY-BAC HYDRO",
-    "price": 967.32,
-    "seller": "Betty Lawson"
+    "name": "Agaricus Equisetum Special Order",
+    "price": 585.93,
+    "seller": "Jacqueline Perez"
   },
   {
-    "name": "Pollens - Weeds and Garden Plants, Nettle Urtica dioica",
-    "price": 782.77,
-    "seller": "Betty Ward"
+    "name": "Parsley",
+    "price": 519.06,
+    "seller": "Billy Parker"
   },
   {
-    "name": "AVANDAMET",
-    "price": 632.08,
-    "seller": "Chris Mitchell"
+    "name": "Ranitidine",
+    "price": 926.64,
+    "seller": "Patricia Cooper"
   },
   {
-    "name": "Extra Strength Pain Reliever PM",
-    "price": 542.72,
-    "seller": "Betty Lawson"
+    "name": "GOONG SECRET CALMING BATH",
+    "price": 742.47,
+    "seller": "Nicole Harris"
   }
 ]

@@ -35,6 +35,7 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         importUsers();
         importProducts();
         this.productService.exportProductsInRange();
+        this.userService.exportSuccessfullySoldProducts();
     }
 
     private void importProducts() throws FileNotFoundException {
