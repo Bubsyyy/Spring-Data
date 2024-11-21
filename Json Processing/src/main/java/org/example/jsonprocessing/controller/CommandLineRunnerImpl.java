@@ -34,8 +34,10 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         importCategories();
         importUsers();
         importProducts();
-        this.productService.exportProductsInRange();
-        this.userService.exportSuccessfullySoldProducts();
+        //this.productService.exportProductsInRange();
+        //this.userService.exportSuccessfullySoldProducts();
+        this.categoryService.exportCategories();
+
     }
 
     private void importProducts() throws FileNotFoundException {
