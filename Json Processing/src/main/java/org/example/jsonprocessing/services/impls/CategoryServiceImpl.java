@@ -97,7 +97,8 @@ public class CategoryServiceImpl implements CategoryService {
         fileWriter.close();
     }
 
-    private boolean isImported() {
+    @Override
+    public boolean isImported() {
         return categoryRepository.count() > 0;
     }
 

@@ -8,4 +8,6 @@ public interface UserService {
     void seedUsers() throws FileNotFoundException;
 
     void exportSuccessfullySoldProducts() throws IOException;
+
+    public boolean isImported();
 }

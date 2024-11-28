@@ -87,7 +87,8 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    private boolean isImported() {
+    @Override
+    public boolean isImported() {
         return userRepository.count() > 0;
     }
 }

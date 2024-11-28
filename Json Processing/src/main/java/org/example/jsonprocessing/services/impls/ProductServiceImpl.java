@@ -87,7 +87,8 @@ public class ProductServiceImpl implements ProductService {
         fileWriter.close();
     }
 
-    private boolean isImported() {
+    @Override
+    public boolean isImported() {
         return productRepository.count() > 0;
     }
 

@@ -10,4 +10,6 @@ public interface CategoryService {
 
     void exportCategories() throws IOException;
 
+    public boolean isImported();
+
 }

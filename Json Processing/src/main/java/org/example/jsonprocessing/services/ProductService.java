@@ -8,4 +8,6 @@ public interface ProductService {
     void seedProducts() throws FileNotFoundException;
 
     void exportProductsInRange() throws IOException;
+
+    public boolean isImported();
 }
