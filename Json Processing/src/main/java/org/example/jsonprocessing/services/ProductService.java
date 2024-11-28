@@ -9,5 +9,5 @@ public interface ProductService {
 
     void exportProductsInRange() throws IOException;
 
-    public boolean isImported();
+    boolean isImported();
 }

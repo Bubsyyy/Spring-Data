@@ -9,5 +9,5 @@ public interface UserService {
 
     void exportSuccessfullySoldProducts() throws IOException;
 
-    public boolean isImported();
+    boolean isImported();
 }
